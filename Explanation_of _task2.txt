@@ -1,0 +1,24 @@
+Task 2
+1. Enter the url you want to crawl
+2. Enter the keyword 
+3. The urls related to keyword are refined by searching for keyword in url or anchor tag text.
+4. The variations were handled using this technique
+       1. Studied the url structure of wikipedia
+       2. It separates every word with "_" character.
+       3.The keyword variation is handled by making use of above wikipedia's url structure.
+       4. Links are browsed with the variation of upper ,lower and sentence case keywords.
+       5. Links having second or third word as keyword are easily handled using link structure.
+       6. Anchor tag text content are also checked so that links related to keyword should appear in the list.
+       7. For example we take rain as a keyword and demonstrate the handling of variations.
+       8. Only those links are selected which start with Rain or rain i.e links starting with "https://en.wikipedia.org/wiki/Rain" 
+           or "https://en.wikipedia.org/wiki/rain".
+       9. Links having "_rain" or "_Rain" or "_RAIN" in them are also selected.
+       10. Links having rain or Rain as a word in anchor tag text are also selected.
+
+As beautifulsoup  returns a soup object which has a tree structure and from that we can easily extract and html tag.
+Firstly all irrelevant links are removed then we check for the links realted to the keyword.
+The keyword is appended in links using concatination and then the every link is compared with this keyword-concatinated link.
+The handling of lower and upper case is done through string functions like upper() and lower()
+All the variations are implemented using concatination and string functions.
+
+ 
